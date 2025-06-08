@@ -19,65 +19,64 @@
 </head>
 <body>
     <audio id="audio-bosnian">
-        <source src="https://cdn.glitch.global/89d63ca7-af10-4014-a3e6-eb87b2a0421a/ttsmaker-file-2025-3-8-17-36-17.mp3?v=1741451794149" type="audio/mpeg">
+        <source src="https://raw.githubusercontent.com/saracen7mi/skijaliste/main/skijalistebosanski.mp3" type="audio/mpeg">
     </audio>
     <audio id="audio-english">
-        <source src="https://cdn.glitch.global/89d63ca7-af10-4014-a3e6-eb87b2a0421a/ttsmaker-file-2025-3-8-20-42-53.mp3?v=1741462983599" type="audio/mpeg">
+        <source src="https://raw.githubusercontent.com/saracen7mi/skijaliste/main/skijalisteengleski.mp3" type="audio/mpeg">
     </audio>
     <audio id="audio-german">
-        <source src="https://cdn.glitch.global/89d63ca7-af10-4014-a3e6-eb87b2a0421a/ttsmaker-file-2025-3-8-20-40-58.mp3?v=1741462869058" type="audio/mpeg">
+        <source src="https://raw.githubusercontent.com/saracen7mi/skijaliste/main/skijalistenjemacki.mp3" type="audio/mpeg">
     </audio>
     <audio id="audio-italian">
-        <source src="https://cdn.glitch.global/89d63ca7-af10-4014-a3e6-eb87b2a0421a/ttsmaker-file-2025-3-8-20-44-26.mp3?v=1741463079530" type="audio/mpeg">
+        <source src="https://raw.githubusercontent.com/saracen7mi/skijaliste/main/skijalisteitalijanski.mp3" type="audio/mpeg">
     </audio>
     <audio id="audio-turkish">
-        <source src="https://cdn.glitch.global/89d63ca7-af10-4014-a3e6-eb87b2a0421a/ttsmaker-file-2025-3-8-20-45-49.mp3?v=1741463158241" type="audio/mpeg">
+        <source src="https://raw.githubusercontent.com/saracen7mi/skijaliste/main/skijalisteturski.mp3" type="audio/mpeg">
     </audio>
 
-  
     <a-scene embedded arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;">
+        <a-assets>
+            <a-asset-item id="state-model" src="https://cdn.jsdelivr.net/gh/saracen7mi/skijaliste@main/grbdrzave3d.glb"></a-asset-item>
+            <a-asset-item id="municipality-model" src="https://cdn.jsdelivr.net/gh/saracen7mi/skijaliste@main/grbOpstine.glb"></a-asset-item>
+        </a-assets>
+
         <a-plane color="#008000" height="3.5" width="6.5" position="0 0.5 -5" opacity="0.9"></a-plane>
 
-       <a-entity 
-            gltf-model="https://cdn.glitch.global/89d63ca7-af10-4014-a3e6-eb87b2a0421a/grbdrzave3d.glb?v=1741532279242" 
+        <a-entity 
+            gltf-model="#state-model" 
             position="-2 1 -5" 
             scale="1 1 1" 
             rotation="0 240 0" 
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
         </a-entity>
 
-      <a-entity 
-    gltf-model="https://cdn.glitch.global/89d63ca7-af10-4014-a3e6-eb87b2a0421a/grbopstine3d.glb?v=1741532381767" 
-    position="2 1 -5" 
-    scale="1 1 1" 
-    rotation="0 240 0" 
-    animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
-</a-entity>
-      
-      
-      
-  
+        <a-entity 
+            gltf-model="#municipality-model" 
+            position="2 1 -5" 
+            scale="1 1 1" 
+            rotation="0 240 0" 
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
+        </a-entity>
 
-<a-entity id="eng-button" geometry="primitive: plane; height: 0.5; width: 1.5"
-          material="color: red" position="-2.5 2 -4.9"
-          text="value: ENG; color: white; align: center; width: 3;">
-</a-entity>
+        <a-entity id="eng-button" geometry="primitive: plane; height: 0.5; width: 1.5"
+                  material="color: red" position="-2.5 2 -4.9"
+                  text="value: ENG; color: white; align: center; width: 3;">
+        </a-entity>
 
-<a-entity id="deu-button" geometry="primitive: plane; height: 0.5; width: 1.5"
-          material="color: yellow" position="-1 2 -4.9"
-          text="value: DEU; color: black; align: center; width: 3;">
-</a-entity>
+        <a-entity id="deu-button" geometry="primitive: plane; height: 0.5; width: 1.5"
+                  material="color: yellow" position="-1 2 -4.9"
+                  text="value: DEU; color: black; align: center; width: 3;">
+        </a-entity>
 
-<a-entity id="ita-button" geometry="primitive: plane; height: 0.5; width: 1.5"
-          material="color: blue" position="0.5 2 -4.9"
-          text="value: ITA; color: white; align: center; width: 3;">
-</a-entity>
+        <a-entity id="ita-button" geometry="primitive: plane; height: 0.5; width: 1.5"
+                  material="color: blue" position="0.5 2 -4.9"
+                  text="value: ITA; color: white; align: center; width: 3;">
+        </a-entity>
 
-<a-entity id="tur-button" geometry="primitive: plane; height: 0.5; width: 1.5"
-          material="color: brown" position="2 2 -4.9"
-          text="value: TUR; color: white; align: center; width: 3;">
-</a-entity>
-
+        <a-entity id="tur-button" geometry="primitive: plane; height: 0.5; width: 1.5"
+                  material="color: brown" position="2 2 -4.9"
+                  text="value: TUR; color: white; align: center; width: 3;">
+        </a-entity>
 
         <a-entity position="0 0.8 -4.9">
             <a-text value=" Skijanje ima dugu istoriju u Kladnju, a prva sjedeznica izgradjena je 1985. godine nakon Olimpijskih igara u Sarajevu. Od tada je Kladanj postao renomirana destinacija za ljubitelje zimskih sportova, koja privlaci skijase iz cijele bivse Jugoslavije. Samo kilometar od centra Kladnja nalazi se skijaliste Karaula, jedino skijalište u Tuzlanskom kantonu. Ovo moderno opremljeno naselje ima zicaru kapaciteta 1.200 ljudi na sat, glavnu padinu dugu 1.700 metara i lokaciju u srcu netaknute prirode, okruzeno gustim cetinarskim sumama i planinskim vrhovima sa kojih se pruza velicanstven pogled. Zimski pejzaz ovog kraja privlaci ne samo skijase, već i planinare, planinare i sve one koji zele da dožive cari snjeznog raja daleko od gradske buke. Zahvaljujuci svojoj dugoj tradiciji i prirodnim ljepotama, Kladanj je i dalje nezaobilazna destinacija za one koji zele zajedno dozivjeti sport, opustanje i zabavu u planinskom okruzenju. "
@@ -85,7 +84,6 @@
             </a-text>
         </a-entity>
 
-         
         <!-- Dodani tekst ispod žutog teksta -->
         <a-entity position="0 -0.8 -4.9" id="location-link">
             <a-text 
@@ -96,37 +94,30 @@
                 scale="1.2 1.4 1.4"
                 letter-spacing="1">
             </a-text>
-           <!-- Crvena pozadina samo za "Klikni ovde" -->
-    <a-plane 
-        color="#FF0000" 
-        height="0.5" 
-        width="1.6" 
-        opacity="0.5" 
-        position="-0.3 0 0.06">
-    </a-plane>
+            <!-- Crvena pozadina samo za "Klikni ovde" -->
+            <a-plane 
+                color="#FF0000" 
+                height="0.5" 
+                width="1.6" 
+                opacity="0.5" 
+                position="-0.3 0 0">
+            </a-plane>
 
-    <!-- "Klikni ovde" na crvenoj pozadini -->
-    <a-text 
-        value="Klikni ovde" 
-        position="-0.4 0 0.06"  
-        color="#000000"
-        align="center"
-        scale="1.2 1.2 1.2" 
-        letter-spacing="1"
-        class="clickable">
-    </a-text>
-          
-          
+            <!-- "Klikni ovde" na crvenoj pozadini -->
+            <a-text 
+                value="Klikni ovdje" 
+                position="-0.4 2 0" 
+                color="#000000"
+                align="center"
+                scale="0.3 0.3 0.3" 
+                letter-spacing="1"
+                class="clickable">
+            </a-text>
         </a-entity>
-      
-      
-      
-      
-      
-      
+
         <a-entity 
             gltf-model="" 
-            position="-2 1 -5" 
+            position="-2 1 -4" 
             scale="0.5 0.5 0.5" 
             rotation="0 240 0" 
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
@@ -134,14 +125,17 @@
 
         <a-entity 
             gltf-model="" 
-            position="2 1 -5" 
+            position="2 1 -4" 
             scale="0.5 0.5 0.5" 
             rotation="0 240 0" 
             animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
         </a-entity>
 
-        <a-entity camera look-controls position="0 0 0" fov="85">
-            <a-cursor color="#FF0000" radius="0.05"></a-cursor>
+        <a-entity camera look-controls position="0 0 0">
+            <a-cursor 
+                color="#ff0000" 
+                radius="0.05">
+            </a-cursor>
         </a-entity>
     </a-scene>
 
@@ -169,23 +163,17 @@
         document.getElementById('ita-button').addEventListener('mouseenter', () => playAudio(italianAudio));
         document.getElementById('tur-button').addEventListener('mouseenter', () => playAudio(turkishAudio));
 
-        // window.addEventListener('load', () => {
-        //     bosnianAudio.play().catch(e => console.log("Audio autoplay blokiran: " + e));
-        // });
-      
-      window.addEventListener('load', () => {
-    document.body.addEventListener('click', () => {
-        if (bosnianAudio.paused) {
-            bosnianAudio.play();
-        }
-    }, { once: true }); // Pokreće se samo jednom
-});
+        window.addEventListener('load', () => {
+            document.body.addEventListener('click', () => {
+                if (bosnianAudio.paused) {
+                    bosnianAudio.play();
+                }
+            }, { once: true }); // Pokreće se samo jednom
+        });
 
-       document.getElementById('location-link').addEventListener('click', () => {
-    window.location.href = 'https://www.google.com/maps/dir/?api=1&destination= 44.220404621396796, 18.682650837936635  &travelmode=driving';
-});
-      
-      
+        document.getElementById('location-link').addEventListener('click', () => {
+            window.location.href = 'https://www.google.com/maps/dir/?api=1&destination=44.220404621396796,18.682650837936635&travelmode=driving';
+        });
     </script>
 </body>
 </html>
